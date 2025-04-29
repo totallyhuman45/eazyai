@@ -14,7 +14,7 @@ pub fn Landing() -> Element {
     let nav = navigator();              // ← programmatic navigator
 
     if let Some(path) = (*PROJECT)() {
-        nav.replace(Route::Frame {});
+        nav.replace(Route::Data {});
     }
     rsx! {
 

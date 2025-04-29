@@ -22,11 +22,36 @@ enum Route {
     #[route("/")]
     Landing,
 
-    #[route("/Frame")]
-    Frame, // <------ add this new variant
+    // #[route("/Frame")]
+    // Frame,
+    #[layout(Frame)]
+    #[route("/Frame/Data")]
+    Data,
+    #[route("/Frame/Architecture")]
+    Architecture,
+    #[route("/Frame/Settings")]
+    Settings,
+    #[route("/Frame/Run")]
+    Run,
+    #[route("/Frame/Results")]
+    Results,
 }
 
-
+fn Data() -> Element {
+    rsx!{"Data"}
+}
+fn Architecture() -> Element {
+    rsx!{"Architecture"}
+}
+fn Settings() -> Element {
+    rsx!{"Settings"}
+}
+fn Run() -> Element {
+    rsx!{"Run"}
+}
+fn Results() -> Element {
+    rsx!{"Results"}
+}
 fn main() {
     println!("{:?}", ensure_projects_folder_in_documents());
     dioxus::launch(App);
