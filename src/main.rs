@@ -2,6 +2,16 @@ mod random_functions;
 mod landing;
 mod frame;
 
+mod windows;
+
+use windows::*;
+
+use architecture::*;
+use data::*;
+use settings::*;
+use run::*;
+use results::*;
+
 use frame::*;
 use landing::*;
 use random_functions::*;
@@ -37,21 +47,9 @@ enum Route {
     Results,
 }
 
-fn Data() -> Element {
-    rsx!{"Data"}
-}
-fn Architecture() -> Element {
-    rsx!{"Architecture"}
-}
-fn Settings() -> Element {
-    rsx!{"Settings"}
-}
-fn Run() -> Element {
-    rsx!{"Run"}
-}
-fn Results() -> Element {
-    rsx!{"Results"}
-}
+
+
+
 fn main() {
     println!("{:?}", ensure_projects_folder_in_documents());
     dioxus::launch(App);
@@ -60,7 +58,6 @@ fn main() {
 
 #[component]
 fn App() -> Element {
-
     rsx! {
         Router::<Route> {}
     }
