@@ -16,7 +16,7 @@ static CSS: Asset = asset!("/assets/frame.css");
 #[component]
 pub fn Frame() -> Element {
     // cant use signals in this because of stupid signal rules
-    let mut open = use_signal(|| 2);
+    let mut open = use_signal(|| 0);
     let nav = navigator();              // ← programmatic navigator
     println!("{:?}",open);
     match open(){
