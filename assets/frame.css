@@ -1,0 +1,151 @@
+/* app-theme.css */
+
+/* Root variables for easy color tweaking */
+:root {
+    --bg-color: #2d2d2d;
+    --panel-color: #3c3c3c;
+    --accent-color: #5fb3b3; /* Godot blue-ish */
+    --text-color: #eeeeee;
+    --border-color: #4a4a4a;
+    --hover-color: #6ccccc;
+    --active-color: #82d9d9;
+    --font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* General body styling */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+/* Panels or containers */
+.container,
+.panel {
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 16px;
+    margin: 12px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--panel-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+button:active {
+    background-color: var(--active-color);
+    border-color: var(--active-color);
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+    background-color: var(--panel-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px;
+    margin: 6px 0;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+/* Links */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+/* Scrollbar (optional for full Blender/Godot feel) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+}
+.button-bar {
+    display: flex;
+    width: 100%;
+}
+
+.button-bar button {
+    flex: 1; /* each button takes equal space */
+    padding: 10px;
+    margin: 2px; /* optional: small spacing between buttons */
+    background-color: var(--panel-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-bar button:hover {
+    background-color: var(--hover-color);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.left,
+.right {
+    flex: 1;
+    padding: 20px;
+}
+.black-text h1,
+.black-text h2,
+.black-text h3,
+.black-text h4,
+.black-text h5,
+.black-text h6 {
+    color: black;
+}

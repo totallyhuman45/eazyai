@@ -1,0 +1,10 @@
+[application]
+name = "easyai"
+default_platform = "desktop"
+
+
+[bundle]
+identifier = "com.mycompany"
+publisher = "MyCompany"
+icon = ["assets/icon.icns"]
+resources = ["assets/**/*"]
