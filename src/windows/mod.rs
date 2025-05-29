@@ -1,7 +1,7 @@
-pub mod data;
 pub mod architecture;
-pub mod settings;
-pub mod run;
+pub mod data;
 pub mod results;
+pub mod run;
+pub mod settings;
 
-pub mod randomfunction2;
+pub mod loading_and_folders2;

@@ -2,7 +2,7 @@ use crate::frame::DOCS;
 use crate::{windows, PROJECT};
 use dioxus::prelude::*;
 use serde::{Deserialize, Serialize};
-use windows::randomfunction2::*;
+use windows::loading_and_folders2::*;
 
 static SETTINGS: GlobalSignal<Settings> = GlobalSignal::new(|| Settings {
     optimizer: optimizer::Adam,

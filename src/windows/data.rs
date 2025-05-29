@@ -4,8 +4,7 @@ use dioxus::prelude::*;
 use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 use std::vec;
-use windows::randomfunction2::*;
-
+use windows::loading_and_folders2::*;
 
 static FILEAMOUNT: GlobalSignal<String> = GlobalSignal::new(|| "choose file type".to_string());
 

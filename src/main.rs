@@ -1,6 +1,6 @@
 mod frame;
 mod landing;
-mod random_functions;
+mod loading_and_folders;
 
 mod windows;
 
@@ -14,12 +14,11 @@ use settings::*;
 
 use frame::*;
 use landing::*;
-use random_functions::*;
+use loading_and_folders::*;
 
 use dioxus::prelude::*;
 
 use std::path::PathBuf;
-
 
 static PROJECT: GlobalSignal<Option<PathBuf>> = GlobalSignal::new(|| None);
 
